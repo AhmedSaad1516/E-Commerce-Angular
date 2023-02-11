@@ -1,0 +1,40 @@
+<div  class="product-item bg-light mb-4" >
+    <div >
+        <!-- routerLink="/details/{{data.id}}" -->
+        <div  class="product-img position-relative overflow-hidden " style="text-align: center;"   
+        >
+            <img class="img-fluid w-50" src="{{data.image}}" alt="">
+         
+            
+        </div>
+    </div>
+   
+   
+    <div class="text-center py-4">
+     <h6 style="text-align: center;">  {{data.title}}</h6>
+        <div class="d-flex align-items-center justify-content-center mt-2">
+            <h5>{{data.price}}$</h5><h6 class="text-muted ml-2"></h6>
+        </div>
+        <div class="d-flex align-items-center justify-content-center mb-1">
+            <small class="fa fa-star text-primary mr-1" ></small>
+            <small class="fa fa-star text-primary mr-1"></small>
+            <small class="fa fa-star text-primary mr-1"></small>
+            <small class="fa fa-star text-primary mr-1"></small>
+            <small class="fa fa-star text-primary mr-1"></small>
+            <small>(99)</small>
+            <div>
+                <div class="product-action">
+                    <a class="btn btn-outline-dark btn-square" *ngIf="!addBtn" (click)="addBtn=true" ><i class="fa fa-shopping-cart"></i></a>
+                    <div class="d-flex w-50" *ngIf="addBtn"   >
+                        <input type="number" class="form-control" [(ngModel)]="ammount">
+                        <button class="btn btn-dangrt" (click)="addToCart();addBtn= false">Add</button>
+                    </div>
+                    <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                    <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
